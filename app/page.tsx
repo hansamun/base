@@ -301,7 +301,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
             <div className="relative group">
               <Image
-                src="/images/copper-pool.png"
+                src="/images/copper-pool.jpeg"
                 alt="Copper chilling on pool float"
                 width={300}
                 height={300}
@@ -311,7 +311,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-business.png"
+                src="/images/copper-business.jpeg"
                 alt="Copper in business attire"
                 width={300}
                 height={300}
@@ -321,7 +321,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-rocket.png"
+                src="/images/copper-rocket.jpeg"
                 alt="Copper riding rocket to the moon"
                 width={300}
                 height={300}
@@ -335,7 +335,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
             <div className="relative group">
               <Image
-                src="/images/copper-car.png"
+                src="/images/copper-car.jpeg"
                 alt="Copper dogs in convertible car"
                 width={300}
                 height={300}
@@ -345,7 +345,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-bathroom.png"
+                src="/images/copper-bathroom.jpeg"
                 alt="Copper in bathroom with phone"
                 width={300}
                 height={300}
@@ -355,7 +355,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-diamond-hands.png"
+                src="/images/copper-diamond-hands.jpeg"
                 alt="Copper with diamond hands gesture"
                 width={300}
                 height={300}
@@ -369,7 +369,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             <div className="relative group">
               <Image
-                src="/images/copper-selfie.png"
+                src="/images/copper-selfie.jpeg"
                 alt="Copper dogs taking selfie with charts"
                 width={300}
                 height={300}
@@ -379,7 +379,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-friends.png"
+                src="/images/copper-friends.jpeg"
                 alt="Copper dogs friendship"
                 width={300}
                 height={300}
@@ -389,7 +389,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-chef.png"
+                src="/images/copper-chef.jpeg"
                 alt="Copper as chef cooking money"
                 width={300}
                 height={300}
