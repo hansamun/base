@@ -40,7 +40,6 @@ export default function Component() {
             />
             <div className="flex flex-col">
               <span className="text-lg md:text-2xl font-bold font-heading">Copper On Base</span>
-              <span className="text-xs md:text-sm text-gray-400 font-body">COPPER TOKEN</span>
             </div>
           </div>
 
