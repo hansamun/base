@@ -4,9 +4,18 @@ import Image from "next/image"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useState } from "react"
+import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 
 export default function Component() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // Scroll animation hooks for different sections
+  const [aboutRef, aboutVisible] = useScrollAnimation(0.2)
+  const [tokenomicsRef, tokenomicsVisible] = useScrollAnimation(0.2)
+  const [howToBuyRef, howToBuyVisible] = useScrollAnimation(0.2)
+  const [memesRef, memesVisible] = useScrollAnimation(0.2)
+  const [telegramRef, telegramVisible] = useScrollAnimation(0.2)
+  const [twitterRef, twitterVisible] = useScrollAnimation(0.2)
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -160,12 +169,14 @@ export default function Component() {
             alt="Copper On Base Mascot"
             width={150}
             height={150}
-            className="mb-6 md:mb-8 rounded-full md:w-[200px] md:h-[200px]"
+            className="mb-6 md:mb-8 rounded-full md:w-[200px] md:h-[200px] animate-scale-in"
           />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight animate-fade-in-up animate-delay-200">
             MEET COPPER ON BASE
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4">The Sleepy Shiba Taking Over Base</p>
+          <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4 animate-fade-in-up animate-delay-400">
+            The Sleepy Shiba Taking Over Base
+          </p>
         </div>
 
         {/* Scroll Down Animation */}
@@ -178,9 +189,15 @@ export default function Component() {
       </section>
 
       {/* 1. About Section */}
-      <section id="about" className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950">
+      <section
+        id="about"
+        ref={aboutRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950 transition-all duration-1000 ${
+          aboutVisible ? "" : "scroll-hidden"
+        }`}
+      >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6 md:gap-8">
-          <div className="w-full md:w-1/2">
+          <div className={`w-full md:w-1/2 ${aboutVisible ? "animate-fade-in-left" : ""}`}>
             <Image
               src="/images/copper-dog-mascot.png"
               alt="Copper On Base Mascot"
@@ -189,7 +206,7 @@ export default function Component() {
               className="rounded-lg object-cover w-full max-w-full h-auto"
             />
           </div>
-          <div className="w-full md:w-1/2 relative">
+          <div className={`w-full md:w-1/2 relative ${aboutVisible ? "animate-fade-in-right animate-delay-200" : ""}`}>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-heading">Who is $COPPER?</h2>
             <p className="text-gray-300 mb-4 leading-relaxed font-body text-sm md:text-base">
               Bonk refers to a series of comic-style memes in which meme characters such as Doge and Cheems get hit on
@@ -211,10 +228,26 @@ export default function Component() {
       </section>
 
       {/* 2. Tokenomics Section */}
-      <section id="tokenomics" className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-heading">COPPER NOMICS</h2>
+      <section
+        id="tokenomics"
+        ref={tokenomicsRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900 transition-all duration-1000 ${
+          tokenomicsVisible ? "" : "scroll-hidden"
+        }`}
+      >
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-heading ${
+            tokenomicsVisible ? "animate-fade-in-up" : ""
+          }`}
+        >
+          COPPER NOMICS
+        </h2>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          <Card className="bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center">
+          <Card
+            className={`bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center ${
+              tokenomicsVisible ? "animate-slide-in-up animate-delay-100" : ""
+            }`}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="text-lg md:text-xl font-bold font-heading">100% Liquidity Burnt</CardTitle>
             </CardHeader>
@@ -225,7 +258,11 @@ export default function Component() {
               </CardDescription>
             </CardContent>
           </Card>
-          <Card className="bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center">
+          <Card
+            className={`bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center ${
+              tokenomicsVisible ? "animate-slide-in-up animate-delay-200" : ""
+            }`}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="text-lg md:text-xl font-bold font-heading">1B Supply</CardTitle>
             </CardHeader>
@@ -236,7 +273,11 @@ export default function Component() {
               </CardDescription>
             </CardContent>
           </Card>
-          <Card className="bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center">
+          <Card
+            className={`bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center ${
+              tokenomicsVisible ? "animate-slide-in-up animate-delay-300" : ""
+            }`}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="text-lg md:text-xl font-bold font-heading">Contract Renounced</CardTitle>
             </CardHeader>
@@ -246,7 +287,11 @@ export default function Component() {
               </CardDescription>
             </CardContent>
           </Card>
-          <Card className="bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center sm:col-span-2 lg:col-span-1">
+          <Card
+            className={`bg-blue-800 border-blue-700 text-white text-center p-4 md:p-6 flex flex-col items-center sm:col-span-2 lg:col-span-1 ${
+              tokenomicsVisible ? "animate-slide-in-up animate-delay-400" : ""
+            }`}
+          >
             <CardHeader className="pb-4">
               <CardTitle className="text-lg md:text-xl font-bold font-heading">Zero % Tax</CardTitle>
             </CardHeader>
@@ -260,23 +305,47 @@ export default function Component() {
       </section>
 
       {/* 3. How to Buy Section */}
-      <section id="how-to-buy" className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950">
+      <section
+        id="how-to-buy"
+        ref={howToBuyRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950 transition-all duration-1000 ${
+          howToBuyVisible ? "" : "scroll-hidden"
+        }`}
+      >
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading">How to Buy $COPPER</h2>
+          <h2
+            className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading ${
+              howToBuyVisible ? "animate-fade-in-up" : ""
+            }`}
+          >
+            How to Buy $COPPER
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
-            <div className="bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800">
+            <div
+              className={`bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800 ${
+                howToBuyVisible ? "animate-scale-in animate-delay-100" : ""
+              }`}
+            >
               <div className="text-2xl md:text-3xl font-bold text-blue-300 mb-4">1</div>
               <h3 className="text-lg md:text-xl font-bold mb-2 font-heading">Get a Wallet</h3>
               <p className="text-gray-300 font-body text-sm md:text-base">
                 Download MetaMask or any Base-compatible wallet
               </p>
             </div>
-            <div className="bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800">
+            <div
+              className={`bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800 ${
+                howToBuyVisible ? "animate-scale-in animate-delay-200" : ""
+              }`}
+            >
               <div className="text-2xl md:text-3xl font-bold text-blue-300 mb-4">2</div>
               <h3 className="text-lg md:text-xl font-bold mb-2 font-heading">Add Base Network</h3>
               <p className="text-gray-300 font-body text-sm md:text-base">Connect your wallet to Base Network</p>
             </div>
-            <div className="bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800">
+            <div
+              className={`bg-blue-900 p-4 md:p-6 rounded-lg border border-blue-800 ${
+                howToBuyVisible ? "animate-scale-in animate-delay-300" : ""
+              }`}
+            >
               <div className="text-2xl md:text-3xl font-bold text-blue-300 mb-4">3</div>
               <h3 className="text-lg md:text-xl font-bold mb-2 font-heading">Buy $COPPER</h3>
               <p className="text-gray-300 font-body text-sm md:text-base">Swap ETH for $COPPER on our DEX</p>
@@ -286,7 +355,9 @@ export default function Component() {
             href="https://ape.store/base/0x3323ad1915c2f78233c2ceb32846f4781704fb3d"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-blue-600 hover:bg-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold transition-colors font-body inline-block"
+            className={`bg-blue-600 hover:bg-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold transition-colors font-body inline-block ${
+              howToBuyVisible ? "animate-fade-in-up animate-delay-400" : ""
+            }`}
           >
             BUY $COPPER NOW
           </a>
@@ -294,12 +365,24 @@ export default function Component() {
       </section>
 
       {/* 4. Memes Gallery */}
-      <section id="meme" className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-heading">Meet Our Mascot</h2>
+      <section
+        id="meme"
+        ref={memesRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900 transition-all duration-1000 ${
+          memesVisible ? "" : "scroll-hidden"
+        }`}
+      >
+        <h2
+          className={`text-3xl md:text-4xl font-bold text-center mb-6 md:mb-8 font-heading ${
+            memesVisible ? "animate-fade-in-up" : ""
+          }`}
+        >
+          Meet Our Mascot
+        </h2>
         <div className="max-w-7xl mx-auto">
           {/* First Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-scale-in animate-delay-100" : ""}`}>
               <Image
                 src="/images/copper-pool.jpeg"
                 alt="Copper chilling on pool float"
@@ -309,7 +392,7 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-scale-in animate-delay-200" : ""}`}>
               <Image
                 src="/images/copper-business.jpeg"
                 alt="Copper in business attire"
@@ -319,7 +402,9 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group sm:col-span-2 md:col-span-1">
+            <div
+              className={`relative group sm:col-span-2 md:col-span-1 ${memesVisible ? "animate-scale-in animate-delay-300" : ""}`}
+            >
               <Image
                 src="/images/copper-rocket.jpeg"
                 alt="Copper riding rocket to the moon"
@@ -333,7 +418,7 @@ export default function Component() {
 
           {/* Second Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-scale-in animate-delay-400" : ""}`}>
               <Image
                 src="/images/copper-car.jpeg"
                 alt="Copper dogs in convertible car"
@@ -343,7 +428,7 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-scale-in animate-delay-500" : ""}`}>
               <Image
                 src="/images/copper-bathroom.jpeg"
                 alt="Copper in bathroom with phone"
@@ -353,7 +438,9 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group sm:col-span-2 md:col-span-1">
+            <div
+              className={`relative group sm:col-span-2 md:col-span-1 ${memesVisible ? "animate-scale-in animate-delay-600" : ""}`}
+            >
               <Image
                 src="/images/copper-diamond-hands.jpeg"
                 alt="Copper with diamond hands gesture"
@@ -367,7 +454,7 @@ export default function Component() {
 
           {/* Third Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-fade-in-up animate-delay-100" : ""}`}>
               <Image
                 src="/images/copper-selfie.jpeg"
                 alt="Copper dogs taking selfie with charts"
@@ -377,7 +464,7 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group">
+            <div className={`relative group ${memesVisible ? "animate-fade-in-up animate-delay-200" : ""}`}>
               <Image
                 src="/images/copper-friends.jpeg"
                 alt="Copper dogs friendship"
@@ -387,7 +474,9 @@ export default function Component() {
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all rounded-lg"></div>
             </div>
-            <div className="relative group sm:col-span-2 md:col-span-1">
+            <div
+              className={`relative group sm:col-span-2 md:col-span-1 ${memesVisible ? "animate-fade-in-up animate-delay-300" : ""}`}
+            >
               <Image
                 src="/images/copper-chef.jpeg"
                 alt="Copper as chef cooking money"
@@ -402,10 +491,25 @@ export default function Component() {
       </section>
 
       {/* 5. Telegram Section */}
-      <section className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading">Join Our Telegram</h2>
+      <section
+        ref={telegramRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-950 text-center transition-all duration-1000 ${
+          telegramVisible ? "" : "scroll-hidden"
+        }`}
+      >
+        <h2
+          className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading ${
+            telegramVisible ? "animate-fade-in-up" : ""
+          }`}
+        >
+          Join Our Telegram
+        </h2>
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg md:text-xl text-gray-300 mb-6 font-body">
+          <p
+            className={`text-lg md:text-xl text-gray-300 mb-6 font-body ${
+              telegramVisible ? "animate-fade-in-up animate-delay-200" : ""
+            }`}
+          >
             Connect with the Copper On Base community on Telegram! Get the latest updates, share memes, and chat with
             fellow holders.
           </p>
@@ -413,7 +517,9 @@ export default function Component() {
             href="https://t.me/basedcopper"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body"
+            className={`inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body ${
+              telegramVisible ? "animate-scale-in animate-delay-400" : ""
+            }`}
           >
             <Image src="/images/telegram-icon.png" alt="Telegram" width={32} height={32} className="rounded" />
             <span>JOIN TELEGRAM</span>
@@ -422,10 +528,25 @@ export default function Component() {
       </section>
 
       {/* 6. Twitter Section */}
-      <section className="py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading">Follow Us on Twitter</h2>
+      <section
+        ref={twitterRef}
+        className={`py-8 md:py-12 px-4 md:px-6 lg:px-8 bg-blue-900 text-center transition-all duration-1000 ${
+          twitterVisible ? "" : "scroll-hidden"
+        }`}
+      >
+        <h2
+          className={`text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading ${
+            twitterVisible ? "animate-fade-in-up" : ""
+          }`}
+        >
+          Follow Us on Twitter
+        </h2>
         <div className="max-w-4xl mx-auto">
-          <p className="text-lg md:text-xl text-gray-300 mb-6 font-body">
+          <p
+            className={`text-lg md:text-xl text-gray-300 mb-6 font-body ${
+              twitterVisible ? "animate-fade-in-up animate-delay-200" : ""
+            }`}
+          >
             Stay updated with the latest news, announcements, and memes from Copper On Base. Follow us for real-time
             updates!
           </p>
@@ -433,7 +554,9 @@ export default function Component() {
             href="https://x.com/basedcopper"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body"
+            className={`inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body ${
+              twitterVisible ? "animate-scale-in animate-delay-400" : ""
+            }`}
           >
             <Image src="/images/twitter-icon.png" alt="Twitter" width={32} height={32} className="rounded" />
             <span>FOLLOW TWITTER</span>
