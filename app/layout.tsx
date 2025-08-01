@@ -14,9 +14,9 @@ const space_grotesk = Space_Grotesk({
 })
 
 export const metadata = {
-  title: "$COPPER - Based Copper Shiba | Meme Token on Base",
+  title: "$COPPER - Copper On Base | Meme Token on Base Network",
   description:
-    "Meet Based Copper, the sleepiest Shiba in crypto. Join the pack with $COPPER meme token on Base Network.",
+    "Meet Copper On Base, the sleepiest Shiba in crypto. Join the pack with $COPPER meme token on Base Network.",
   icons: {
     icon: "/images/copper-dog-mascot.png",
   },

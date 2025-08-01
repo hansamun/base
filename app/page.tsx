@@ -24,13 +24,13 @@ export default function Component() {
           <div className="flex items-center space-x-2">
             <Image
               src="/images/copper-dog-mascot.png"
-              alt="Based Copper Logo"
+              alt="Copper On Base Logo"
               width={40}
               height={40}
               className="rounded-full md:w-12 md:h-12"
             />
             <div className="flex flex-col">
-              <span className="text-lg md:text-2xl font-bold font-heading">Based Copper</span>
+              <span className="text-lg md:text-2xl font-bold font-heading">Copper On Base</span>
               <span className="text-xs md:text-sm text-gray-400 font-body">COPPER TOKEN</span>
             </div>
           </div>
@@ -157,13 +157,13 @@ export default function Component() {
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto">
           <Image
             src="/images/copper-dog-mascot.png"
-            alt="Based Copper Mascot"
+            alt="Copper On Base Mascot"
             width={150}
             height={150}
             className="mb-6 md:mb-8 rounded-full md:w-[200px] md:h-[200px]"
           />
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight">
-            MEET BASED COPPER
+            MEET COPPER ON BASE
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4">The Sleepy Shiba Taking Over Base</p>
         </div>
@@ -183,7 +183,7 @@ export default function Component() {
           <div className="w-full md:w-1/2">
             <Image
               src="/images/copper-dog-mascot.png"
-              alt="Based Copper Mascot"
+              alt="Copper On Base Mascot"
               width={600}
               height={400}
               className="rounded-lg object-cover w-full max-w-full h-auto"
@@ -231,8 +231,8 @@ export default function Component() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-gray-300 leading-relaxed font-body text-sm md:text-base">
-                Fixed token supply with no possibility of inflation - just like Based Copper's chill attitude, it never
-                changes.
+                Fixed token supply with no possibility of inflation - just like Copper On Base's chill attitude, it
+                never changes.
               </CardDescription>
             </CardContent>
           </Card>
@@ -242,7 +242,7 @@ export default function Component() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-gray-300 leading-relaxed font-body text-sm md:text-base">
-                Ownership relinquished - Based Copper belongs to the community now, just like a good boy should.
+                Ownership relinquished - Copper On Base belongs to the community now, just like a good boy should.
               </CardDescription>
             </CardContent>
           </Card>
@@ -252,7 +252,7 @@ export default function Component() {
             </CardHeader>
             <CardContent>
               <CardDescription className="text-gray-300 leading-relaxed font-body text-sm md:text-base">
-                Zero tax on buys and sells - Based Copper doesn't bite, he just wants everyone to prosper.
+                Zero tax on buys and sells - Copper On Base doesn't bite, he just wants everyone to prosper.
               </CardDescription>
             </CardContent>
           </Card>
@@ -301,7 +301,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
             <div className="relative group">
               <Image
-                src="/images/copper-pool.jpeg"
+                src="/images/copper-pool.png"
                 alt="Copper chilling on pool float"
                 width={300}
                 height={300}
@@ -311,7 +311,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-business.jpeg"
+                src="/images/copper-business.png"
                 alt="Copper in business attire"
                 width={300}
                 height={300}
@@ -321,7 +321,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-rocket.jpeg"
+                src="/images/copper-rocket.png"
                 alt="Copper riding rocket to the moon"
                 width={300}
                 height={300}
@@ -335,7 +335,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
             <div className="relative group">
               <Image
-                src="/images/copper-car.jpeg"
+                src="/images/copper-car.png"
                 alt="Copper dogs in convertible car"
                 width={300}
                 height={300}
@@ -345,7 +345,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-bathroom.jpeg"
+                src="/images/copper-bathroom.png"
                 alt="Copper in bathroom with phone"
                 width={300}
                 height={300}
@@ -355,7 +355,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-diamond-hands.jpeg"
+                src="/images/copper-diamond-hands.png"
                 alt="Copper with diamond hands gesture"
                 width={300}
                 height={300}
@@ -369,7 +369,7 @@ export default function Component() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             <div className="relative group">
               <Image
-                src="/images/copper-selfie.jpeg"
+                src="/images/copper-selfie.png"
                 alt="Copper dogs taking selfie with charts"
                 width={300}
                 height={300}
@@ -379,7 +379,7 @@ export default function Component() {
             </div>
             <div className="relative group">
               <Image
-                src="/images/copper-friends.jpeg"
+                src="/images/copper-friends.png"
                 alt="Copper dogs friendship"
                 width={300}
                 height={300}
@@ -389,7 +389,7 @@ export default function Component() {
             </div>
             <div className="relative group sm:col-span-2 md:col-span-1">
               <Image
-                src="/images/copper-chef.jpeg"
+                src="/images/copper-chef.png"
                 alt="Copper as chef cooking money"
                 width={300}
                 height={300}
@@ -406,7 +406,7 @@ export default function Component() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading">Join Our Telegram</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-300 mb-6 font-body">
-            Connect with the Based Copper community on Telegram! Get the latest updates, share memes, and chat with
+            Connect with the Copper On Base community on Telegram! Get the latest updates, share memes, and chat with
             fellow holders.
           </p>
           <a
@@ -426,7 +426,7 @@ export default function Component() {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 font-heading">Follow Us on Twitter</h2>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg md:text-xl text-gray-300 mb-6 font-body">
-            Stay updated with the latest news, announcements, and memes from Based Copper. Follow us for real-time
+            Stay updated with the latest news, announcements, and memes from Copper On Base. Follow us for real-time
             updates!
           </p>
           <a
@@ -443,7 +443,7 @@ export default function Component() {
 
       {/* Footer */}
       <footer className="py-6 md:py-8 text-center text-gray-500 text-xs md:text-sm font-body px-4 bg-blue-950">
-        <p>&copy; {new Date().getFullYear()} Based Copper. All rights reserved. Good boy guaranteed.</p>
+        <p>&copy; {new Date().getFullYear()} Copper On Base. All rights reserved. Good boy guaranteed.</p>
       </footer>
     </div>
   )
