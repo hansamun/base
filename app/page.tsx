@@ -74,7 +74,7 @@ export default function Component() {
               TWITTER
             </a>
             <a
-              href="https://ape.store/base/0x3323ad1915c2f78233c2ceb32846f4781704fb3d"
+              href="https://ape.store/base/0x17d5496e28e9ff564a29dae7cc61f35670d67780"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors font-body"
@@ -146,7 +146,7 @@ export default function Component() {
                 TWITTER
               </a>
               <a
-                href="https://ape.store/base/0x3323ad1915c2f78233c2ceb32846f4781704fb3d"
+                href="https://ape.store/base/0x17d5496e28e9ff564a29dae7cc61f35670d67780"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -345,7 +345,7 @@ export default function Component() {
             </div>
           </div>
           <a
-            href="https://ape.store/base/0x3323ad1915c2f78233c2ceb32846f4781704fb3d"
+            href="https://ape.store/base/0x17d5496e28e9ff564a29dae7cc61f35670d67780"
             target="_blank"
             rel="noopener noreferrer"
             className={`bg-blue-600 hover:bg-blue-500 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold transition-colors font-body inline-block ${
