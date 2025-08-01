@@ -164,17 +164,11 @@ export default function Component() {
       <section className="relative w-full min-h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-950 opacity-90"></div>
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto">
-          <Image
-            src="/images/copper-dog-mascot.png"
-            alt="Copper On Base Mascot"
-            width={150}
-            height={150}
-            className="mb-6 md:mb-8 rounded-full md:w-[200px] md:h-[200px] animate-scale-in"
-          />
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight animate-fade-in-up animate-delay-200">
+          {/* Hapus bagian Image ini */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight animate-fade-in-up">
             MEET COPPER ON BASE
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4 animate-fade-in-up animate-delay-400">
+          <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4 animate-fade-in-up animate-delay-200">
             The Sleepy Shiba Taking Over Base
           </p>
         </div>
