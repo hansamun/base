@@ -39,7 +39,7 @@ export default function Component() {
               className="rounded-full md:w-12 md:h-12"
             />
             <div className="flex flex-col">
-              <span className="text-lg md:text-2xl font-bold font-heading">Copper On Base</span>
+              <span className="text-lg md:text-2xl font-bold font-heading">$COPPER</span>
             </div>
           </div>
 
@@ -165,7 +165,7 @@ export default function Component() {
         <div className="relative z-10 text-center flex flex-col items-center max-w-4xl mx-auto">
           {/* Hapus bagian Image ini */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold tracking-tight uppercase font-heading leading-tight animate-fade-in-up">
-            MEET COPPER ON BASE
+            COPPER ON BASE
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mt-4 text-blue-200 px-4 animate-fade-in-up animate-delay-200">
             The Sleepy Shiba Taking Over Base
