@@ -18,7 +18,7 @@ export const metadata = {
   description:
     "Meet Copper On Base, the sleepiest Shiba in crypto. Join the pack with $COPPER meme token on Base Network.",
   icons: {
-    icon: "/images/copper-dog-mascot.png",
+    icon: "/favicon.png",
   },
   generator: "v0.dev",
 }
