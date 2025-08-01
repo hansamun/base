@@ -58,7 +58,7 @@ export default function Component() {
               MEMES
             </a>
             <a
-              href="https://t.me/basedcopper"
+              href="https://t.me/copperonbase"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-300 transition-colors font-body"
@@ -66,7 +66,7 @@ export default function Component() {
               TELEGRAM
             </a>
             <a
-              href="https://x.com/basedcopper"
+              href="https://x.com/Copper_onBase"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-300 transition-colors font-body"
@@ -128,7 +128,7 @@ export default function Component() {
                 MEMES
               </a>
               <a
-                href="https://t.me/basedcopper"
+                href="https://t.me/copperonbase"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -137,7 +137,7 @@ export default function Component() {
                 TELEGRAM
               </a>
               <a
-                href="https://x.com/basedcopper"
+                href="https://x.com/Copper_onBase"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}
@@ -507,7 +507,7 @@ export default function Component() {
             fellow holders.
           </p>
           <a
-            href="https://t.me/basedcopper"
+            href="https://t.me/copperonbase"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body ${
@@ -544,7 +544,7 @@ export default function Component() {
             updates!
           </p>
           <a
-            href="https://x.com/basedcopper"
+            href="https://x.com/Copper_onBase"
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex items-center justify-center space-x-4 bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-lg text-lg font-bold transition-colors font-body ${
